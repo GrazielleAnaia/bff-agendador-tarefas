@@ -8,6 +8,7 @@ import com.grazielleanaia.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.TelefoneDTOResponse;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.UsuarioDTOResponse;
+import com.grazielleanaia.bffagendadortarefas.business.dto.out.ViaCepDTOResponse;
 import com.grazielleanaia.bffagendadortarefas.infrastructure.security.SecurityConfig;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -119,5 +120,14 @@ public class UsuarioController {
     @ApiResponse(responseCode = "500", description = "Erro de servidor.")
     public ResponseEntity<TelefoneDTOResponse> cadastraTelefone(@RequestBody TelefoneDTORequest dto, @RequestHeader(name = "Authorization", required = false) String token) {
         return ResponseEntity.ok(usuarioService.cadastraTelefone(token, dto));
+    }
+
+    @GetMapping("/endereco/{cep}")
+    @Operation(summary = "Busca endereco pelo cep", description = "Busca dados de endereco recebendo um cep.")
+    @ApiResponse(responseCode = "200", description = "Dados de endereco retornados com sucesso.")
+    @ApiResponse(responseCode = "400", description = "Cep invalido nao encontrado.")
+    @ApiResponse(responseCode = "500", description = "Erro de servidor.")
+    public ResponseEntity<ViaCepDTOResponse> buscaDadosEndereco(@PathVariable ("cep") String cep) {
+        return ResponseEntity.ok(usuarioService.buscarEnderecoPorCep(cep));
     }
 }

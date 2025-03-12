@@ -1,7 +1,6 @@
 package com.grazielleanaia.bffagendadortarefas.business;
 
 
-
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.TarefasDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
 import com.grazielleanaia.bffagendadortarefas.business.enums.StatusNotificacaoEnum;
@@ -29,18 +28,18 @@ public class TarefaService {
     }
 
     public List<TarefasDTOResponse> buscaTarefasPorEmail(String token) {
-    return tarefasClient.buscaTarefasPorEmail(token);
+        return tarefasClient.buscaTarefasPorEmail(token);
     }
 
     public void deletaTarefaPorId(String id, String token) {
-       tarefasClient.deletaTarefaPorId(id, token);
+        tarefasClient.deletaTarefaPorId(id, token);
     }
 
     public TarefasDTOResponse alteraStatus(StatusNotificacaoEnum status, String id, String token) {
-      return tarefasClient.alteraStatusNotificacao(status, id, token);
+        return tarefasClient.alteraStatusNotificacao(status, id, token);
     }
 
     public TarefasDTOResponse updateTarefas(TarefasDTORequest dto, String id, String token) {
-     return tarefasClient.updateTarefas(dto, id, token);
+        return tarefasClient.updateTarefas(dto, id, token);
     }
 }

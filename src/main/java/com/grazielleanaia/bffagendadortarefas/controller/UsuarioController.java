@@ -3,7 +3,6 @@ package com.grazielleanaia.bffagendadortarefas.controller;
 
 import com.grazielleanaia.bffagendadortarefas.business.UsuarioService;
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.grazielleanaia.bffagendadortarefas.business.dto.in.LoginDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -15,7 +14,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.*;
 
 @RestController

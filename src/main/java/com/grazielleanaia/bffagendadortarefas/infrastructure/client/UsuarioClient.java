@@ -2,7 +2,6 @@ package com.grazielleanaia.bffagendadortarefas.infrastructure.client;
 
 
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.grazielleanaia.bffagendadortarefas.business.dto.in.LoginDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.grazielleanaia.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
